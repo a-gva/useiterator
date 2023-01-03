@@ -30,7 +30,7 @@ export const IteratorTest = () => {
             Custom ReactHook to fetch users from an API and display their
             picture and name. <br />
             It returns the list of users, the current user, a function to fetch
-            the next user and function to move back to the previous user
+            the next user and function to move back to the previous user.
             <br />
           </p>
           <p>
