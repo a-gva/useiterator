@@ -17,14 +17,27 @@ export const IteratorTest = () => {
     <div className='flex flex-col lg:flex-row gap-10 px-6'>
       {/* DIV 1 */}
       <div className='lg:w-1/4 pt-12 lg:pt-0'>
-        <h1 className='text-4xl font-bold '>useIterator Hook</h1>
-        <div className='flex items-start text-left pt-12 pb-6'>
+        <div>
+          <img
+            src='../public/react-logo.png'
+            alt=''
+            className='spinning w-12'
+          />
+          <h1 className='text-4xl font-bold '>useIterator Hook</h1>
+        </div>
+        <div className='flex flex-col items-start text-left pt-12 pb-6'>
           <p>
             Custom ReactHook to fetch users from an API and display their
             picture and name. <br />
             It returns the list of users, the current user, a function to fetch
             the next user and function to move back to the previous user
             <br />
+          </p>
+          <p>
+            Repo:{' '}
+            <a href='https://github.com/a-gva/react-turing-customfetch'>
+              https://github.com/a-gva/react-turing-customfetch
+            </a>
           </p>
         </div>
 
