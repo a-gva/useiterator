@@ -28,20 +28,20 @@ export const useIterator = (url: string) => {
       console.log('userFetched: ', userFetched);
       console.log('userFetched[current]: ', userFetched[current]);
 
-      // destructure userFetched[0] to get first and last name
+      // destructure userFetched[0] to get first, last name and picture
       const {
         name: { first, last },
-        picture: { thumbnail },
+        picture: { medium },
       } = userFetched[0];
 
       console.log('users.lenght BEFORE array update: ', users.length);
       console.log('current current: ', current);
 
       if (users.length == 0) {
-        setUsers([...users, { name: `${first} ${last}`, picture: thumbnail }]);
+        setUsers([...users, { name: `${first} ${last}`, picture: medium }]);
         setCurrent(0);
       } else {
-        setUsers([...users, { name: `${first} ${last}`, picture: thumbnail }]);
+        setUsers([...users, { name: `${first} ${last}`, picture: medium }]);
         setCurrent(users.length);
       }
       setIsLoading(false);
@@ -56,15 +56,18 @@ export const useIterator = (url: string) => {
     }
   };
 
-  // user[current] = users[users.length - 1];
-
   const next = () => {
-    // somente buscar quando: current for users.lenght -1
+    // runs fetch only when current is the last user in the array
     if (current >= users.length - 1) {
       fetchUser();
     } else {
       setCurrent(current + 1);
     }
+  };
+
+  const clear = () => {
+    setUsers([]);
+    setCurrent(0);
   };
 
   return {
@@ -73,14 +76,6 @@ export const useIterator = (url: string) => {
     isLoading,
     next,
     previous,
+    clear,
   };
 };
-
-// await fetch(url)
-//   .then((response) => response.json())
-//   .then((data) => {
-//     console.log('data: ', data.results);
-//     setUsersList(data.results);
-//   });
-// console.log('Finished Fetching!');
-// setIsLoading(false);
