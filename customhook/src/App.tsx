@@ -1,34 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import './App.css';
+import { IteratorTest } from './IteratorTest';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+    <div className='App'>
+      <p>
+        1. Create a Custom ReactHook to fetch users from an API
+        (https://randomuser.me/api/) and display their picture and name on the
+        page one. <br />
+        2 It must return the list of users, the current user, a function to
+        fetch the next user and function to move back to the previous user
+        <br />3 Test the Custom ReactHook in the index.tsx
       </p>
+      <h1 className='text-3xl font-bold underline'>useIterator Project</h1>
+      <IteratorTest />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
