@@ -3,7 +3,7 @@ import { IteratorTest } from './IteratorTest';
 
 function App() {
   return (
-    <div className='App'>
+    <div className='App flex text-neutral-300 w-full'>
       <IteratorTest />
     </div>
   );
