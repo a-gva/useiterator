@@ -35,13 +35,13 @@ export const IteratorTest = () => {
 
         <div className='flex items-center justify-center gap-1 h-20 pb-2'>
           <button
-            className='w-24 h-full border-white border-solid'
+            className='w-24 h-full  bg-neutral-800 '
             onClick={() => previous()}
           >
             ← Previous
           </button>
           <button
-            className='w-24 h-full border border-white border-solid'
+            className='w-24 h-full  bg-neutral-800 '
             onClick={() => next()}
           >
             → Next
@@ -77,7 +77,7 @@ export const IteratorTest = () => {
               <img
                 src={users[current].picture}
                 alt=''
-                className='w-16 rounded-full'
+                className='w-16 rounded-full border-4 border-neutral-200 border-solid'
               />
               <p className=' py-2 text-center'>{users[current].name}</p>
             </div>
@@ -101,7 +101,7 @@ export const IteratorTest = () => {
                 <img
                   src={user.picture}
                   alt=''
-                  className='w-20 rounded-full shadow-2xl'
+                  className='w-20 rounded-full shadow-2xl border-4 border-neutral-200 border-solid'
                 />
               </div>
               <p className='py-4 text-sm text-neutral-100 font-bold text-center'>
