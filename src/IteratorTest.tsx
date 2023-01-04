@@ -13,7 +13,7 @@ export const IteratorTest = () => {
   useEffect(() => {}, [current]);
 
   return (
-    <div className='flex flex-col lg:flex-row lg:px-10 bg-neutral-900 gap-10 px-6 min-h-screen '>
+    <div className='flex flex-col lg:flex-row lg:px-10 w-full bg-neutral-900 gap-10 px-6 min-h-screen '>
       {/* DIV 1 */}
       <div className='lg:w-1/4 lg:mt-12 pt-12 lg:pt-0'>
         <div>
