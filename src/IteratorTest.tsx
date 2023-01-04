@@ -1,6 +1,7 @@
 // below, iteratorTest.tsx
 import { useIterator } from './useIterator';
 import { useEffect } from 'react';
+import ReactLogo from '../src/assets/react-logo.png';
 
 export const IteratorTest = () => {
   const hookReturn = useIterator('https://randomuser.me/api/');
@@ -16,11 +17,7 @@ export const IteratorTest = () => {
       {/* DIV 1 */}
       <div className='lg:w-1/4 pt-12 lg:pt-0'>
         <div>
-          <img
-            src='../src/assets/react-logo.png'
-            alt=''
-            className='spinning w-12'
-          />
+          <img src={ReactLogo} alt='' className='spinning w-12' />
           <h1 className='text-4xl font-bold '>useIterator Hook</h1>
         </div>
         <div className='flex flex-col items-start text-left pt-12 pb-6'>
