@@ -8,7 +8,7 @@ interface User {
 }
 
 export const useIterator = (url: string) => {
-  let [users, setUsers] = useState([]);
+  let [users, setUsers] = useState<any[]>([]);
   let [current, setCurrent] = useState(0);
   let [isLoading, setIsLoading] = useState(false);
 
