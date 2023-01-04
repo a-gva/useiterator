@@ -7,11 +7,9 @@ export const IteratorTest = () => {
 
   const { users, current, isLoading, next, previous, clear } = hookReturn;
 
-  useEffect(() => {
-    console.log('usersList: ', users);
-    console.log('current Index: ', current);
-    console.log(`usersList[${current}]: `, users[current]);
-  }, [current]);
+  const repoURL = 'https://github.com/a-gva/useiterator/';
+
+  useEffect(() => {}, [current]);
 
   return (
     <div className='flex flex-col lg:flex-row gap-10 px-6'>
@@ -19,7 +17,7 @@ export const IteratorTest = () => {
       <div className='lg:w-1/4 pt-12 lg:pt-0'>
         <div>
           <img
-            src='../public/react-logo.png'
+            src='../src/assets/react-logo.png'
             alt=''
             className='spinning w-12'
           />
@@ -34,10 +32,7 @@ export const IteratorTest = () => {
             <br />
           </p>
           <p>
-            Repo:{' '}
-            <a href='https://github.com/a-gva/react-turing-customfetch'>
-              https://github.com/a-gva/react-turing-customfetch
-            </a>
+            Repo: <a href={repoURL}>{repoURL}</a>
           </p>
         </div>
 

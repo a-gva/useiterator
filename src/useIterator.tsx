@@ -13,20 +13,20 @@ export const useIterator = (url: string) => {
   let [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    console.log('useEffect: users: ', users);
-    console.log('useEffect: Last user added: users[current]: ', users[current]);
-    console.log('useEffect: users.length AFTER array update: ', users.length);
-    console.log('useEffect: current: ', current);
+    // console.log('useEffect: users: ', users);
+    // console.log('useEffect: Last user added: users[current]: ', users[current]);
+    // console.log('useEffect: users.length AFTER array update: ', users.length);
+    // console.log('useEffect: current: ', current);
   }, [users, current]);
 
   const fetchUser = async () => {
     setIsLoading(true);
-    console.log('Start fetching...');
+    // console.log('Start fetching...');
     await axios(url).then((response) => {
       const { data } = response;
       const { results: userFetched } = data;
-      console.log('userFetched: ', userFetched);
-      console.log('userFetched[current]: ', userFetched[current]);
+      // console.log('userFetched: ', userFetched);
+      // console.log('userFetched[current]: ', userFetched[current]);
 
       // destructure userFetched[0] to get first, last name and picture
       const {
@@ -34,8 +34,8 @@ export const useIterator = (url: string) => {
         picture: { medium },
       } = userFetched[0];
 
-      console.log('users.lenght BEFORE array update: ', users.length);
-      console.log('current current: ', current);
+      // console.log('users.lenght BEFORE array update: ', users.length);
+      // console.log('current current: ', current);
 
       if (users.length == 0) {
         setUsers([...users, { name: `${first} ${last}`, picture: medium }]);
@@ -50,7 +50,7 @@ export const useIterator = (url: string) => {
 
   const previous = () => {
     if (current <= 0) {
-      console.log('No previous user!');
+      // console.log('No previous user!');
     } else {
       setCurrent(current - 1);
     }
